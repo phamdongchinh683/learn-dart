@@ -1,27 +1,18 @@
+import 'dart:io';
+
 void main() {
-  // when use if else normal
-  int num1 = 10;
-  int num2 = 15;
-  int max = 0;
-  if (num1 > num2) {
-    max = num1;
+  var vowels = ["u", "e", "o", "a", "i"];
+
+  print("Enter a character: ");
+  String? character = stdin.readLineSync();
+
+  if (character != null && character.length == 1) {
+    if (vowels.contains(character.toLowerCase())) {
+      print("$character is a vowel");
+    } else {
+      print("$character is not a vowel)");
+    }
   } else {
-    max = num2;
+    print("Invalid input. Please enter a single character.");
   }
-  print("The greatest number is $max");
-
-// use ternary-operator
-  int num3 = 10;
-  int num4 = 15;
-  int max2 = (num3 > num4) ? num3 : num4;
-  print(max2);
-
-  //
-  var selection = 2;
-  var output = (selection == 2) ? 'Apple' : 'Banana';
-  print(output); // "Apple"
-  //
-  var age = 18;
-  var check = (age >= 18) ? 'You ara a voter.' : 'You are not a voter.';
-  print(check); // "you ara a vote"
 }
