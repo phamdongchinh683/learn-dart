@@ -16,5 +16,5 @@ void selectionSort(List<int> arr) {
 void main() {
   List<int> numbers = [64, 25, 12, 22, 11];
   selectionSort(numbers);
-  print(numbers); // [11, 12, 22, 25, 64]
+  print(numbers);
 }
